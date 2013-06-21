@@ -1,19 +1,105 @@
 !!!
-%html
+%html{ lang: 'ja' }
   %head
+    %meta{ charset: 'utf-8' }
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
       %title= content_for?(:title) ? yield(:title) : "Mongr"
       %meta{:content => content_for?(:description) ? yield(:description) : "Mongr", :name => "description"}
-        = stylesheet_link_tag "application", :media => "all"
-        = javascript_include_tag "application"
+        -# = stylesheet_link_tag "application", :media => "all"
+        = stylesheet_link_tag "//yui.yahooapis.com/pure/0.2.0/pure-min.css", :media => "all"
+        -# = javascript_include_tag "application"
         = csrf_meta_tags
         = yield(:head)
   %body{:class => "#{controller_name} #{action_name}"}
-    #container.container
-      %header
-        = render 'layouts/navigation'
-        = render 'layouts/messages'
-      #main{:role => "main"}
-        = yield
-      %footer
-    / ! end of #container
+    .pure-g-r
+      .pure-u-1-4{ style: 'background:#ccc' } aaa
+      .pure-u-1-4{ style: 'background:#999' } bbb
+      .pure-u-1-4{ style: 'background:#ccc' } ccc
+      .pure-u-1-4{ style: 'background:#999' } ddd
+    -# .pure-g-r#layout
+      -# .pure-u#nav
+      -#   .nav-inner
+      -#     .profile
+      -#       .pure-g
+      -#         .pure-u
+      -#           = image_tag 'http://si0.twimg.com/profile_images/2672327531/a0f29b6c75ed6067c3daffee2bbdd72d.png'
+      -#         .pure-u-2-3
+      -#           .profile-nickname
+      -#             %span supermomonga
+      -#     .pure-menu.pure-menu-open
+      -#       %ul
+      -#         %li.pure-menu-heading Rooms
+      -#         %li= link_to raw('じょうほうかがく！ <span class="room-count">(2)</span>'), '/'
+      -#         %li= link_to 'vim-users.jp', '/'
+      -#         %li= link_to 'Emasc', '/'
+      -#         %li= link_to 'SandBox', '/'
+      -#         %li= link_to 'Ruby', '/'
+      -#         %li= link_to 'Go言語', '/'
+      -#         %li= link_to 'Qt Users', '/'
+      -# .pure-u#main
+      -#   .content
+      -#     test2
+
+    -# #container.container
+    -#   %header
+    -#     = render 'layouts/navigation'
+    -#     = render 'layouts/messages'
+    -#   #main{:role => "main"}
+    -#     = yield
+    -#   %footer
+
+:css
+  #layout{
+    padding-left: 250px;
+    position: relative;
+  }
+  #nav{
+    width: 250px;
+    margin-left: -250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    background: rgb(37, 42, 58);
+    padding: 2em 0;
+    // border-right: 1px solid #ddd;
+  }
+  #nav .profile{
+    padding: 5px 20px;
+  }
+  #nav .profile img{
+    border-radius: 32px;
+    width: 64px;
+    height: 64px;
+    display: block;
+    margin-right: 6px;
+  }
+  #nav .profile-nickname{
+    padding-left: 0.5em;
+    color: #fff;
+  }
+  #nav .pure-menu {
+    background: transparent;
+    border: none;
+    text-align: left;
+  }
+  #nav .pure-menu-heading {
+    border-bottom: none;
+    font-size: 110%;
+    color: rgb(75, 113, 151);
+  }
+  #nav .pure-menu a {
+    color: #fff;
+    margin-left: 0.5em;
+  }
+  .room-count {
+    color: rgb(75, 113, 151);
+  }
+  #nav .pure-menu a:hover, #nav .pure-menu a:focus {
+    background: rgb(55, 60, 90);
+  }
+  #main{
+    width: 100%;
+    background: #999;
+  }
+
