@@ -12,4 +12,27 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.autosize-min
 //= require_tree .
+
+
+var adjustChatContainer = function(){
+  headerHeight = $('.chat-content-header').outerHeight();
+  inputHeight  = $('.chat-content-input').outerHeight();
+  windowHeight = $(window).height();
+  itemsHeight  = windowHeight - headerHeight - inputHeight;
+  $('.chat-content-items').css('height', itemsHeight + 'px');
+}
+
+$(function(){
+
+  adjustChatContainer();
+  $(window).resize(adjustChatContainer)
+
+  $('.chat-content-input textarea').autosize({
+    append: "\n",
+    callback: adjustChatContainer
+  });
+
+});
+
