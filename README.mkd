@@ -19,7 +19,7 @@ Mongr is web-based lingr client.
 
 * Template Engine: Haml
 * Testing Framework: RSpec and Factory Girl
-* Front-end Framework: None
+* Front-end Framework: Purecss
 * Form Builder: SimpleForm
 * Authentication: OmniAuth
 * Authorization: CanCan
