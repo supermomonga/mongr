@@ -1,19 +1,16 @@
-
 ## Mongr
 
 Mongr is web-based lingr client.
 
-
 ## Environment
 
-* This application requires Ruby 1.9.3 and Rails 3.2.13.
+* This application requires Ruby 1.9.3+ and Rails 3.2.13+.
 * This application is hosted on heroku.
 
 ## Database
 
-* SQLite on Development env
+* SQLite3 on Development env
 * PostgreSQL on Production env
-
 
 ## Development
 
@@ -26,13 +23,14 @@ Mongr is web-based lingr client.
 
 ## Email
 
-The application is configured to send email using a Mandrill account.
+The application is configured to send emails using a Mandrill account.
 
 ## Developers
 
 * supermomonga
+* ujihisa
 
 ## License
 
-Sonouchi kimeru.
+Sonouchi kimeru (GPL-3+?).
 
