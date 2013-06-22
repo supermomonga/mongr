@@ -1,0 +1,38 @@
+
+## Mongr
+
+Mongr is web-based lingr client.
+
+
+## Environment
+
+* This application requires Ruby 1.9.3 and Rails 3.2.13.
+* This application is hosted on heroku.
+
+## Database
+
+* SQLite on Development env
+* PostgreSQL on Production env
+
+
+## Development
+
+* Template Engine: Haml
+* Testing Framework: RSpec and Factory Girl
+* Front-end Framework: None
+* Form Builder: SimpleForm
+* Authentication: OmniAuth
+* Authorization: CanCan
+
+## Email
+
+The application is configured to send email using a Mandrill account.
+
+## Developers
+
+* supermomonga
+
+## License
+
+Sonouchi kimeru.
+
